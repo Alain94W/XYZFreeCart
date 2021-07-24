@@ -77,3 +77,10 @@ You have to wire everything like this:
 <p align="center" width="100%">
   <img src="PicoWiring1.png" alt="picowiring" width="33%" align="c"/>
 </p>
+
+
+## Button disposition
+
+<p align="center" width="100%">
+  <img src="CtrPanelFace.png" alt="picowiring" width="33%" align="c"/>
+</p>
