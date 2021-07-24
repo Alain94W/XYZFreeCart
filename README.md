@@ -75,12 +75,12 @@ You will need to "sacrifice" an original EEPROM from one of your cartridge, you 
 You have to wire everything like this:
 
 <p align="center" width="100%">
-  <img src="PicoWiring1.png" alt="picowiring" width="33%" align="c"/>
+  <img src="PicoWiring1.png" alt="picowiring" width="50%" align="c"/>
 </p>
 
 
 ## Button disposition
 
 <p align="center" width="100%">
-  <img src="CtrPanelFace.png" alt="picowiring" width="33%" align="c"/>
+  <img src="CtrPanelFace.png" alt="picowiring" width="50%" align="c"/>
 </p>
