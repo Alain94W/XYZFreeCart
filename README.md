@@ -1,1 +1,42 @@
-XYZ Davinci FreeCart
+<h2>XYZ Davinci FreeCart</h2>
+
+If you are like me bored about having to reset the cratridge chip with an external computer, then this git can maybe help you.
+
+<h3>History of the project</h3>
+I was using for a long time the arduino reseter made by volvito (by the way, thanks to him for he's work), I was stuck on a PLA filament bought on Amazon (Amazon Basics) The filament always clog the nozzle, I had to play a lot with the extruder temperature and all the time had to reprogram the cartridge chip.
+To get ride of this, I used a raspberry pico and a 4*7 Digit LED display (TM1637) and using 4 buttons, I made an EEPROM emulator that I put directly inside the original cartridge.
+
+The raspberry pico is very powerfull, but to achieve my project, I had to overclock it to 291MHz and to use both core to run the code.
+On Core 0, the UNIO Slave driver is running, waiting for some command coming from the printer.
+On Core 1, the button and display are handled.
+
+The content of the original EEPROM was dump from a cartridge chip and is written in the flash memory of the pico. When the program start, the FLASH is loaded into the RAM, every time the printer is writting the lenght update into the cartridge chip, the pico update it's RAM then save it to it's FLASH.
+
+The TM1637 is used to allow the user to changes this settings directly from the cartridge:
+
+<li> Bed Temperature </li>
+<li> Extruder Temperature </li>
+<li> Filement color </li>
+<li> Type of Material </li>
+<li> Display and or reset the remaining filament length </li>
+
+When changing bed/extruder temp or color, you can save this settings as a profile for the selected material, there is already a set of profile made in the pico for example :
+
+<li>ABS => Bed : 90*C, Extruder : 210*C, Color : Green </li>
+<li>PLA => Bed : 45*C, Extruder : 195*C, Color : Yellow </li>
+
+The available material are :
+
+<li>ABS</li>
+<li>PLA</li>
+<li>PETG</li>
+<li>Water Soluble</li>
+<li>UVCR</li>
+<li>NYLON</li>
+<li>...</li>
+
+<h3>Installation</h3>
+
+git clone this repo, then go into the folder.
+
+
