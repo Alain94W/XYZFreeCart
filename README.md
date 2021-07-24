@@ -1,8 +1,12 @@
-<h2>XYZ Davinci FreeCart</h2>
+## XYZ Davinci FreeCart
 
 If you are like me bored about having to reset the cratridge chip with an external computer, then this git can maybe help you.
 
-<h3>History of the project</h3>
+<p align="center" width="100%">
+  <img src="Cartridge.png" alt="cart" width="33%" align="c"/>
+</p>
+
+## History of the project
 I was using for a long time the arduino reseter made by volvito (by the way, thanks to him for he's work), I was stuck on a PLA filament bought on Amazon (Amazon Basics) The filament always clog the nozzle, I had to play a lot with the extruder temperature and all the time had to reprogram the cartridge chip.
 To get ride of this, I used a raspberry pico and a 4*7 Digit LED display (TM1637) and using 4 buttons, I made an EEPROM emulator that I put directly inside the original cartridge.
 
@@ -35,8 +39,34 @@ The available material are :
 <li>NYLON</li>
 <li>...</li>
 
-<h3>Installation</h3>
+## Installation
 
-git clone this repo, then go into the folder.
+First, this suppose thate you already follow the raspberry pi procedure and then you already have the pico-sdk installed.
+Then, git clone this repo and go into the root folder.
 
+Edit the CMakeLists.txt on line 10, change the SDK path with your own SDK Path.
+
+Run the following command to compil the pico code :
+
+```
+mkdir build
+cd build
+cmake ..
+make
+```
+## TM1637 Display driver
+
+I used a library made by wahlencraft to drive the TM1637 display, you can find more information here on it's github : https://github.com/wahlencraft/TM1637-pico.git
+
+Thanks for this work, it is included in this repo but I would like to credit wahlencraft for that work.
+
+
+## Assembly
+
+The step files are in this repo.
+I printed them in ABS with a fill density of 50% and a layer height of 0.3 with support material.
+
+<p align="center" width="100%">
+  <img src="ControlPanel.png" alt="3dparts" width="33%" align="c"/>
+</p>
 
