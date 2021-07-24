@@ -2,6 +2,11 @@
 
 If you are like me bored about having to reset the cratridge chip with an external computer, then this git can maybe help you.
 
+I will take no responsabilities about what you are doing with this or what will hapen with this, if you burn your printer, get injury or everything else, don't blame me, your choice, your responsabilities.
+I only share for free my work.
+
+That said ...
+
 <p align="center" width="100%">
   <img src="Cart.jpg" alt="cart" width="50%" align="c"/>
 </p>
