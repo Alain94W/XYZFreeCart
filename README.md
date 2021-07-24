@@ -41,7 +41,7 @@ The available material are :
 
 ## Installation
 
-First, this suppose thate you already follow the raspberry pi procedure and then you already have the pico-sdk installed.
+First, this suppose that you already follow the raspberry pi procedure and you already have the pico-sdk installed.
 Then, git clone this repo and go into the root folder.
 
 Edit the CMakeLists.txt on line 10, change the SDK path with your own SDK Path.
@@ -70,3 +70,10 @@ I printed them in ABS with a fill density of 50% and a layer height of 0.3 with 
   <img src="ControlPanel.png" alt="3dparts" width="33%" align="c"/>
 </p>
 
+You will need to "sacrifice" an original EEPROM from one of your cartridge, you will have to remove the EEPROM from the PCB and to solder 3 wire directly in place of.
+
+You have to wire everything like this:
+
+<p align="center" width="100%">
+  <img src="PicoWiring1.png" alt="picowiring" width="33%" align="c"/>
+</p>
