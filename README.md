@@ -70,6 +70,10 @@ I printed them in ABS with a fill density of 50% and a layer height of 0.3 with 
   <img src="ControlPanel.png" alt="3dparts" width="33%" align="c"/>
 </p>
 
+<p align="center" width="100%">
+  <img src="CtrlPanelAssy.png" alt="Assy" width="80%" align="c"/>
+</p>
+
 You will need to "sacrifice" an original EEPROM from one of your cartridge, you will have to remove the EEPROM from the PCB and to solder 3 wire directly in place of.
 
 You have to wire everything like this:
