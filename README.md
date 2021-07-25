@@ -1,9 +1,12 @@
 ## XYZ Davinci FreeCart
 
-If you are like me bored about having to reset the cratridge chip with an external computer, then this git can maybe help you.
+If you are like me bored about having to reset the cartridge chip with an external computer, then this git can maybe help you.
 
-I will take no responsabilities about what you are doing with this or what will hapen with this, if you burn your printer, get injury or everything else, don't blame me, your choice, your responsabilities.
-I only share for free my work and by the way I don't want to see this work being reselled on ebay or on other eshop web site.
+<b> DISCLAIMER
+  
+I will take no responsibilities about what you are doing with this or what will happen with this, if you burn your printer, get injury or everything else, don't blame me, your choice, your responsibilities.
+I made it for fun, it is working well on my printer (DaVinCi AIO 1.0), I only share for free my work and by the way I don't want to see this work being resell on ebay or on other eshop web site.
+</b>
 
 That said ...
 
@@ -18,12 +21,12 @@ To get ride of this, I used a raspberry pico and a 4*7 Digit LED display (TM1637
 
 ## The Arm choice 
 
-Because I need a fast microcontroller, cheap and 3.3V level for that task, I've choosed the Raspberry Pi Pico.
-The raspberry pico is very powerfull, but to achieve my project, I had to overclock it to 291MHz and to use both core to run the code.
+Because I need a fast microcontroller, cheap and 3.3V level for that task, I've choose the Raspberry Pi Pico.
+The raspberry pico is very powerful, but to achieve my project, I had to overclock it to 291MHz and to use both core to run the code.
 On Core 0, the UNIO Slave driver is running, waiting for some command coming from the printer (not using pio because of the UNIO protocol specifications). 
 On Core 1, the button and display are handled.
 
-The content of the original EEPROM was dump from a PLA's cartridge chip and is written in the flash memory of the pico. When the program start, the FLASH is loaded into the RAM, every time the printer is writting the lenght update into the cartridge chip, the pico update it's RAM then save it to it's FLASH.
+The content of the original EEPROM was dump from a PLA's cartridge chip and is written in the flash memory of the pico. When the program start, the FLASH is loaded into the RAM, every time the printer is writing the length update into the cartridge chip, the pico update it's RAM then save it to it's FLASH.
 
 The TM1637 (bought on Amazon) is used to allow the user to changes this settings directly from the cartridge:
 
@@ -49,14 +52,14 @@ The available material are :
 <li>NYLON</li>
 <li>ASA</li>
 
-The are 4 buttons used to select the menu, change settings and reset the lenght:
+The are 4 buttons used to select the menu, change settings and reset the length:
 
 * SEL : Choose menu (Bed, Head, Colo, Mat, Fil)
 * UP/DOWN : to increase and decease the values or change items
 * RESET : press less than 3sec => Save settings in the FLASH, Press >3s, reset the spool len and change the serial number.
 
-If you have an unknow filament error on the printer, just press 4sec the Reset button, this will change the serial number.
-Every changes made uin the menu should be immediatly visible in the cart INFO menu of the printer.
+If you have an unknown filament error on the printer, just press 4sec the Reset button, this will change the serial number.
+Every changes made in the menu should be immediately visible in the cart INFO menu of the printer.
 Do not reset or change the settings while the printer is printing as it may fail your printing job.
 
 
@@ -83,7 +86,7 @@ make
 
 This will end up and create a freecart.uf2 file that you can load via the USB to the pico (in boot mode).
 
-<b> NEVER CONNECT THE USB HOST ON THE PICO WHILE IT IS CONNECTED TO THE PRINTER, the printer is 3.3V level and the main board will be destroyed by the 5V injection coming from the USB over the VSYS line of the PICO. </b> If uyou really want to connect bothj, read carrefully the pico's datasheet, thee are some solution using external schotky diode or mosfet.
+<b> NEVER CONNECT THE USB HOST ON THE PICO WHILE IT IS CONNECTED TO THE PRINTER, the printer is 3.3V level and the main board will be destroyed by the 5V injection coming from the USB over the VSYS line of the PICO. </b> If you really want to connect both, read carefully the pico's datasheet, thee are some solution using external schotky diode or mosfet.
 
 
 ## TM1637 Display driver
