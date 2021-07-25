@@ -78,6 +78,7 @@ Thanks for this work, it is included in this repo but I would like to credit wah
 
 The step files are in this repo.
 I printed them in ABS with a fill density of 50% and a layer height of 0.3 with support material.
+You need to cut the cartridge where you want place the control panel, under the EEPROM PCB to make a path for the cables.
 
 <p align="center" width="100%">
   <img src="ControlPanel.png" alt="3dparts" width="33%" align="c"/>
