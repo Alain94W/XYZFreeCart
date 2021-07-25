@@ -3,7 +3,7 @@
 If you are like me bored about having to reset the cratridge chip with an external computer, then this git can maybe help you.
 
 I will take no responsabilities about what you are doing with this or what will hapen with this, if you burn your printer, get injury or everything else, don't blame me, your choice, your responsabilities.
-I only share for free my work.
+I only share for free my work and by the way I don't want to see this work being reselled on ebay or on other eshop web site.
 
 That said ...
 
