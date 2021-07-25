@@ -9,6 +9,7 @@ That said ...
 
 <p align="center" width="100%">
   <img src="Cart.jpg" alt="cart" width="50%" align="c"/>
+  <img src="Panel.jpg" alt="cart" width="50%" align="c"/>
 </p>
 
 ## History of the project
@@ -78,7 +79,7 @@ Thanks for this work, it is included in this repo but I would like to credit wah
 
 The step files are in this repo.
 I printed them in ABS with a fill density of 50% and a layer height of 0.3 with support material.
-You need to cut the cartridge where you want place the control panel, under the EEPROM PCB to make a path for the cables.
+You need to cut the cartridge where you want place the control panel, over the EEPROM PCB to make a path for the cables.
 
 <p align="center" width="100%">
   <img src="ControlPanel.png" alt="3dparts" width="33%" align="c"/>
@@ -95,6 +96,7 @@ You need to cut the cartridge where you want place the control panel, under the 
 You will need to "sacrifice" an original EEPROM from one of your cartridge, you will have to remove the EEPROM from the PCB and to solder 3 wire directly in place of.
 
 <p align="center" width="100%">
+  <img src="ChipPCB.jpg" alt="Assy" width="80%" align="c"/>
   <img src="CartChipReplacement.jpg" alt="Assy" width="80%" align="c"/>
 </p>
 
