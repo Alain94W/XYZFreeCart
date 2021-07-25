@@ -13,7 +13,7 @@ That said ...
 </p>
 
 ## History of the project
-I was using for a long time the arduino reseter made by volvito (by the way, thanks to him for he's work), I was stuck on a PLA filament bought on Amazon (Amazon Basics) The filament always clog the nozzle, I had to play a lot with the extruder temperature and all the time had to reprogram the cartridge chip.
+I was using for a long time the arduino reseter made by votivo (by the way, thanks to him for he's work), I was stuck on a PLA filament bought on Amazon (Amazon Basics) The filament always clog the nozzle, I had to play a lot with the extruder temperature and all the time had to reprogram the cartridge chip.
 To get ride of this, I used a raspberry pico and a 4*7 Digit LED display (TM1637) and using 4 buttons, I made an EEPROM emulator that I put directly inside the original cartridge.
 
 ## The Arm choice 
