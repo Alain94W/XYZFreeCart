@@ -68,6 +68,12 @@ cd build
 cmake ..
 make
 ```
+
+This will end up and create a freecart.uf2 file that you can load via the USB to the pico (in boot mode).
+
+<b> NEVER CONNECT THE USB HOST ON THE PICO WHILE IT IS CONNECTED TO THE PRINTER, the printer is 3.3V level and the main board will be destroyed by the 5V injection coming from the USB over the VSYS line of the PICO. </b> If uyou really want to connect bothj, read carrefully the pico's datasheet, thee are some solution using external schotky diode or mosfet.
+
+
 ## TM1637 Display driver
 
 I used a library made by wahlencraft to drive the TM1637 display, you can find more information here on it's github : https://github.com/wahlencraft/TM1637-pico.git
