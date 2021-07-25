@@ -18,13 +18,14 @@ To get ride of this, I used a raspberry pico and a 4*7 Digit LED display (TM1637
 
 ## The Arm choice 
 
+Because I need a fast microcontroller, cheap and 3.3V level for that task, I've choosed the Raspberry Pi Pico.
 The raspberry pico is very powerfull, but to achieve my project, I had to overclock it to 291MHz and to use both core to run the code.
-On Core 0, the UNIO Slave driver is running, waiting for some command coming from the printer.
+On Core 0, the UNIO Slave driver is running, waiting for some command coming from the printer (not using pio because of the UNIO protocol specifications). 
 On Core 1, the button and display are handled.
 
-The content of the original EEPROM was dump from a cartridge chip and is written in the flash memory of the pico. When the program start, the FLASH is loaded into the RAM, every time the printer is writting the lenght update into the cartridge chip, the pico update it's RAM then save it to it's FLASH.
+The content of the original EEPROM was dump from a PLA's cartridge chip and is written in the flash memory of the pico. When the program start, the FLASH is loaded into the RAM, every time the printer is writting the lenght update into the cartridge chip, the pico update it's RAM then save it to it's FLASH.
 
-The TM1637 is used to allow the user to changes this settings directly from the cartridge:
+The TM1637 (bought on Amazon) is used to allow the user to changes this settings directly from the cartridge:
 
 <li> Bed Temperature </li>
 <li> Extruder Temperature </li>
@@ -47,6 +48,17 @@ The available material are :
 <li>UVCR</li>
 <li>NYLON</li>
 <li>ASA</li>
+
+The are 4 buttons used to select the menu, change settings and reset the lenght:
+
+* SEL : Choose menu (Bed, Head, Colo, Mat, Fil)
+* UP/DOWN : to increase and decease the values or change items
+* RESET : press less than 3sec => Save settings in the FLASH, Press >3s, reset the spool len and change the serial number.
+
+If you have an unknow filament error on the printer, just press 4sec the Reset button, this will change the serial number.
+Every changes made uin the menu should be immediatly visible in the cart INFO menu of the printer.
+Do not reset or change the settings while the printer is printing as it may fail your printing job.
+
 
 ## Printer firmware
 
