@@ -15,6 +15,8 @@ That said ...
 I was using for a long time the arduino reseter made by volvito (by the way, thanks to him for he's work), I was stuck on a PLA filament bought on Amazon (Amazon Basics) The filament always clog the nozzle, I had to play a lot with the extruder temperature and all the time had to reprogram the cartridge chip.
 To get ride of this, I used a raspberry pico and a 4*7 Digit LED display (TM1637) and using 4 buttons, I made an EEPROM emulator that I put directly inside the original cartridge.
 
+## The Arm choice 
+
 The raspberry pico is very powerfull, but to achieve my project, I had to overclock it to 291MHz and to use both core to run the code.
 On Core 0, the UNIO Slave driver is running, waiting for some command coming from the printer.
 On Core 1, the button and display are handled.
@@ -38,11 +40,17 @@ The available material are :
 
 <li>ABS</li>
 <li>PLA</li>
+<li>FLEX</li>
 <li>PETG</li>
 <li>Water Soluble</li>
 <li>UVCR</li>
 <li>NYLON</li>
-<li>...</li>
+<li>ASA</li>
+
+## Printer firmware
+
+I'm using the original factory shipped firmware on my printer, it is an old one, the version <b>1.1.3</b>, I didn't test this on other version or printer model.
+
 
 ## Installation
 
